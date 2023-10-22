@@ -12,7 +12,7 @@ import androidx.room.Query
 interface ShoppingDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertShoppingItem(list: List<ShoppingItem>)
+    suspend fun insertShoppingItem(list: ShoppingItem)
 
     @Delete
     suspend fun deleteShoppingItem(shoppingItem: ShoppingItem)
